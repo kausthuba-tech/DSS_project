@@ -79,7 +79,7 @@ public class Skier {
 		this.dayID = dayID;
 	}
 
-	public void setTime(String time) {
+	public void setTime() {
 		this.time = time;
 	}
 
@@ -93,6 +93,12 @@ public class Skier {
 				", dayID='" + dayID + '\'' +
 				", time='" + time + '\'' +
 				'}';
+	}
+
+	public void setTime(String time) {
+		// TODO Auto-generated method stub
+		this.time = time;
+		
 	}
 
 

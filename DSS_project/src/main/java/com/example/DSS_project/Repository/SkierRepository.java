@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SkierRepository extends MongoRepository<Skier, String>{
 
+	Skier findByResortID(String resortID);
+	
 
 }
