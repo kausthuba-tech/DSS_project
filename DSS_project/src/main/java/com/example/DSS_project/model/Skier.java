@@ -1,5 +1,7 @@
 package com.example.DSS_project.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -16,17 +18,22 @@ public class Skier {
 	private String liftID;
 
 	@Field
-	private String seasonID;
+	private List<String> seasonID;
 
 	@Field
 	private String dayID;
 
 	@Field
 	private String time;
+	
+	@Field
+	private String vertical;
 
 	public Skier() {}
+	
+	
 
-	public Skier(String skierID, String resortID, String liftID, String seasonID, String dayID, String time) {
+	public Skier(String skierID, String resortID, String liftID, List<String> seasonID, String dayID, String time) {
 		this.skierID = skierID;
 		this.resortID = resortID;
 		this.liftID = liftID;
@@ -47,11 +54,12 @@ public class Skier {
 		return liftID;
 	}
 
-	public String getSeasonID() {
+	public List<String> getSeasonID() {
 		return seasonID;
 	}
 
 	public String getDayID() {
+
 		return dayID;
 	}
 
@@ -71,8 +79,8 @@ public class Skier {
 		this.liftID = liftID;
 	}
 
-	public void setSeasonID(String seasonID) {
-		this.seasonID = seasonID;
+	public void setSeasonID(List<String> seasonsInResort) {
+		this.seasonID = seasonsInResort;
 	}
 
 	public void setDayID(String dayID) {
@@ -99,6 +107,18 @@ public class Skier {
 		// TODO Auto-generated method stub
 		this.time = time;
 		
+	}
+
+
+
+	public String getVertical() {
+		return vertical;
+	}
+
+
+
+	public void setVertical(String vertical) {
+		this.vertical = vertical;
 	}
 
 

@@ -13,7 +13,7 @@ public class DssProjectApplication  {
 	public static void main(String[] args) {
 		SpringApplication.run(DssProjectApplication.class);
 	
-	//@Override
+//	@Override
 //	public void run(String... args) throws Exception {
 //
 //		if(skierRepository.findAll().isEmpty()) {
